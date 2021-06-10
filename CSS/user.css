@@ -1,0 +1,204 @@
+body {
+    font-family: Arial;
+    background: white;
+    margin: 0px;
+}
+header{
+    position: relative;
+    float: left;
+   
+    width: 100%;
+}
+
+#title {
+    position: relative;
+    float: left;
+    display: flex;
+    height: 40px;
+    margin: 10px;
+    padding-left: 20px;
+    align-items: center;
+    font-size: 18pt;
+    font-weight: bold;
+    color: #ffffff;
+    border-left: 1px solid #ffffff;
+}
+#content {
+    position: relative;
+    float: left;
+    background: #CFD8DC;
+    width: 100%;
+    min-height: 500px;
+}
+table{
+    width: calc(100% - 40px);
+    margin: 20px;
+    background: #ECEFF1;
+    border-spacing: 1px;
+}
+
+th {
+    background: #BDBDBD;
+    color: white;
+    padding: 10px 0px 10px 0px;
+}
+
+td{
+    height: 60px;
+    background: #FFF;
+    font-size: 10pt;
+    text-align: center;
+    vertical-align: middle;
+}
+.hour{
+    background: #CFD8DC;
+    color: #607D8B;
+}
+
+.web{
+    background: #64B5F6;
+    color: #FFF;
+}
+
+.english{
+    background: #9575CD;
+    color: #FFF;
+}
+
+.cal{
+    background: #81C784
+    ;
+    color: #FFF;
+}
+
+.conmutation{
+    background: #FF8A65;
+    color: #FFF;
+}
+
+.op{
+    background: #4DB6AC;
+    color: #FFF;
+}
+
+.int{
+    background: #F06292    ;
+    color: #FFF;
+}
+
+.di{
+    background: #DCE775;
+    color: #FFF;
+}
+
+.formation{
+    background: #FFB74D;
+    color: #FFF;
+}
+ #logo, #hamburger
+{
+    position: relative; float: left;
+    width: 100%;
+}
+
+
+
+
+
+/* Menu */
+nav {
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    width: 200px;
+    height: 400px;
+    z-index: 10;
+    /* background: #333; */
+    display: none;
+}
+
+.menu {
+    position: relative;
+    float: left;
+    display: flex;
+    align-items: center;
+    /* justify-content: start; */
+    width: calc(100% - 10px);
+    margin: 5px;
+    height: 40px;
+    /* background: red; */
+    cursor: pointer;
+}
+
+.menu:hover {
+    background: #444;
+}
+
+.menu img {
+    height: 24px;
+    margin: 5px;
+}
+
+.menu label {
+    font-size: 10pt;
+    color: #fff;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Content */
+
+
+
+#hamburger
+{
+    width: 32px; height: 32px;
+    margin: 19px 10px 19px 10px;
+}
+
+#hamburger img
+{
+    cursor: pointer;
+}
+
+#logo
+{
+    height: 40px;
+    margin: 10px;
+    width: 40px;
+}
+
+#logo img
+{
+    height: 100%;
+}
+
+#user
+{
+    position: relative;
+    float: right;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin: 0px;
+}
+
+.user-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+#userphoto
+{
+    width: 40px; height: 40px;
+    margin: 15px 10px 15px 10px;
+    border-radius: 20px;
+}
+
+.usersettings, .userexit
+{
+    margin: 5px;
+}
