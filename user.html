@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Title-->
+    <title>Search</title>
+    <!--stylesheet-->
+    <link href= "css/user.css" rel="stylesheet"/>
+    <link href= "css/grid.css" rel="stylesheet"/>
+
+
+    <!--responsive web-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--meta-->
+    <script src="js/grid.js"></script>
+    <script src="js/users.js"></script>
+
+</head>
+<body onload="init()" >
+    <!--Header-->
+    <header>
+        <div id="hamburger">
+            <img src="images/menu_gray.png"
+                onmouseover="this.src='images/menu_green.png';"
+                onmouseout="this.src='images/menu_gray.png';"
+                onclick="toggleMenu();"/>
+        </div>
+        <div id="logo">
+            <img src="images/green.png"/>
+        </div>
+        <div id="user">
+            
+            <div id="userdata">
+                <div id="username">
+                </div>
+                <div id="userrole"></div>
+            </div>
+
+            <img src="images/config_gray.png" class="configicon"
+                onmouseover="this.src='images/config_green.png';"
+                onmouseout="this.src='images/config_gray.png';"
+                onclick="alert('settings');"/>
+            <img src="images/exit_gray.png" class="exiticon"
+                onmouseover="this.src='images/exit_green.png';"
+                onmouseout="this.src='images/exit_gray.png';"
+                onclick='logout()'/>
+        </div>
+    </header>
+    <nav id="nav">
+        <div class="menu">
+            <img src="images/home_white.png"/>
+            <label>Home</label>
+        </div>
+        <div class="menu">
+                <img src="images/dashboard_white.png"/>
+                <label>Dashboard</label>
+        </div>
+        <div class="menu">
+                <img src="images/layout_white.png"/>
+                <label>Layout</label>
+        </div>
+
+    </nav>
+    <div id="content">
+        <div id="userdiv">
+
+        </div>
+    </div>
+  
+</body>
+</html>

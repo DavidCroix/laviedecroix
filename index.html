@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Dashobard</title>
+        <link href="css/style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--javascript-->
+        <script src="js/highcharts.js"></script>
+        <script src="js/temperatures.js"></script>
+        <script src="js/humiditychart.js"></script>
+	
+        
+    </head>
+    <body onload="init();">
+        <header>
+            <div id="hamburger">
+                <img src="images/menu_gray.png"
+                onmouseover="this.src='images/menu_green.png';"
+                onmouseout="this.src='images/menu_gray.png';"
+               onclick="location.href='simulators.html'"/>
+            </div>
+            <div id="logo">
+                <img src="images/green.png"/>
+            </div>
+            <div id="user" >
+                <img src="images/1002.png" class="userphoto"/>
+                <img src="images/confi.png" class="userbutton"
+                onmouseover="this.src='images/confi.png';"
+                onmouseout="this.src='images/confi.png';"
+				onclick="location.href='layout%20.html'"/>
+                <img src="images/exit.png" class="userbutton"
+                onmouseover="this.src='images/exit.png';"
+                onmouseout="this.src='images/exit.png';"
+               onclick="location.href='login.html'"/>
+            </div>
+        </header>
+        
+        <div id="content3">
+            <!--cuadrito en chiquito-->
+            <div id="temp1" class="cuadritokpi">
+                <div class="kpititle"><big>Temperature</big></div>
+                <div class="kpiicon">
+                    <img src="images/temperature.png"/>
+                </div>
+                <div class="kpivalue">
+                    <big>26&deg;C</big>
+                </div>            
+            </div>
+            <!--tabla-->
+            <div id="temp1" class="nokpi" ;>
+                 <div class="chartvalue">
+                    <div class="idktemp" id="temperatures"></div>
+                </div> 
+            </div>
+        
+            <!--cuadrito en chiquito-->
+            <div id="humidity" class="cuadritokpi">
+                    <div class="kpititle"><big>Humidity</big></div>
+                    <div class="kpiicon">
+                        <img src="images/humidity.png"/>
+                    </div>
+                    <div class="kpivalue">
+                        <big>27%</big>
+                    </div>            
+            </div>
+            <!--tabla-->
+            <div id="temp1" class="nokpi" ;>                
+                
+                    <div class="chartvalue">                                
+                        <div class="tbhidk" id="humidities"></div>                            
+                    </div>
+                
+            </div>  
+        
+        
+        
+        
+        </div>
+   
+   
+   
+   
+        
+        </div>
+        <div id="content2">
+            
+        </div>       
+</body>
+</html>

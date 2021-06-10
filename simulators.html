@@ -1,0 +1,246 @@
+<html>
+    <head runat="server">
+        
+        <!--Style sheet-->
+        <link href= "css/simulators.css" rel="stylesheet"/>
+<style type ="text/css">
+body {
+    
+    font-family: arial;
+    margin: 0px;
+    background-image: url("css/fondo.jpg");
+    background-size: auto;
+    
+}
+
+header{
+    position: relative;
+    float: left;
+    width: 100%;
+}
+header{
+    background: #999;
+}
+
+#content{
+    position: absolute;
+    top: 150px;
+    left: 20%;
+}
+#content2{
+    position: absolute;
+    top: 150px;
+    left: 55%;
+}
+#Medidores{
+    position: center;
+    top: 50px;
+    left: 50%;
+    float: left;
+    margin: auto;
+
+}
+#Medidores2{
+    position: center;
+    top: 50px;
+    left: 50%;
+    float: left;
+}
+
+.humeditybuttons{
+    position: relative;
+    float: left;
+    width: 200px;
+    top: 400px;
+    left: 24%;
+    display: flex;
+    justify-content: center;
+}
+.tempeturebuttons{
+    position: relative;
+    float: left;
+    width: 200px;
+    top: 400px;
+    left: 44%;
+    display: flex;
+    justify-content: center;
+}
+.on2 , .off2{
+    display: flex;
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12pt;
+    cursor: pointer;
+    justify-content: center;
+
+}
+
+.on, .off {
+    display: flex;
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12pt;
+    cursor: pointer;
+    justify-content: center;
+}
+
+
+
+.on{
+    background: #43a047;
+    border: 1px solid #2e7d32;
+    flex-grow: 2;
+}
+.off{
+    background: red;
+    border: 1px solid red;
+    flex-grow: 2;
+}
+.on2{
+    background: #43a047;
+    border: 1px solid #2e7d32;
+    flex-grow: 2;
+}
+.off2{
+    background: red;
+    border: 1px solid red;
+    flex-grow: 2;
+}
+
+
+
+
+.on:hover{
+    background: #4caf50;
+    border: 1px solid #388e3c;
+}
+
+
+#hamburger, #logo, #user{
+    position: relative;
+}
+#hamburger, #logo{
+    float: left;
+}
+#hamburger img {
+    cursor: pointer;
+}
+#user{
+    float: right;
+}
+#hamburger{
+    width: 32px; height: 32px;
+    margin: 14px 10px 14px 10px;
+}
+#logo{
+    height: 40px;
+    margin: 10px;
+}
+#logo img{
+    height: 100%;
+}
+#user{
+    height: 60px;
+    margin: 0px 10px 0px auto;
+    display: flex;
+    align-items: center;
+}
+.userphoto {
+    width: 40px; height: 40px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.userbutton {
+    margin: 10px;
+    cursor: pointer;
+    width: 50px; height: 40px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+/*tablet*/
+@media only screen and (max-width:1024px)
+{
+    .kpi {
+        width: calc(50% - 20px);
+    }
+    .chart {
+        width: calc(100% - 20px);
+    }
+   
+}
+/*smartphone*/
+@media only screen and (max-width:640px)
+{
+    .kpi {
+        width: calc(100% - 20px);
+    }
+    .chartvalue {
+        height: 200px
+    }
+   
+}
+</style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+              <title>Medidor Temperatura, Humedad</title>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+              
+              <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+              <script src="js/simulators.js"></script>
+      </head>
+    <body onload="init();">
+        <header>
+            <div id="hamburger">
+                <img src="images/menu_gray.png"
+                onmouseover="this.src='images/menu_green.png';"
+                onmouseout="this.src='images/menu_gray.png';"
+                onclick="location.href='layout%20.html'"/>
+            </div>
+            <div id="logo">
+                <img src="images/green.png"/>
+            </div>
+            <div id="user" >
+                <img src="images/1002.png" class="userphoto"
+                onclick="location.href='user.html'"/>
+                <img src="images/confi.png" class="userbutton"
+                onmouseover="this.src='images/confi.png';"
+                onmouseout="this.src='images/confi.png';"
+				onclick="location.href='layout%20.html'"/>
+                <img src="images/exit.png" class="userbutton"
+                onmouseover="this.src='images/exit.png';"
+                onmouseout="this.src='images/exit.png';"
+                onclick="location.href='login.html'"/>
+            </div>
+        </header>
+      <div id="content">
+            <div id="Medidores"></div>
+      </div>
+
+      <div id="content2">
+            <div id="Medidores2"></div>
+            </div>
+            <div class="humeditybuttons">
+            <button class="on" onclick="alert('Sensor de temperatura ON');"/>ON</button>
+            <button class="off" onclick="alert('Sensor de temperatura OFF');"/>OFF</button>
+            </div>
+
+             <div class="tempeturebuttons">
+             <button class="on2" onclick="alert('Sensor de humedad ON');"/>ON</button>
+             <button class="off2" onclick="alert('Sensor de humedad OFF');"/>OFF</button>
+             </div>
+
+            
+
+			
+		
+        
+        
+                   
+</body>
+</html>
